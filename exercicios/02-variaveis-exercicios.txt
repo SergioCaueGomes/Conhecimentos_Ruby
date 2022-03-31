@@ -1,0 +1,10 @@
+Usando variaveis, escreva um programa que calcula e exiba na tela:
+
+- quantas horas há em um ano?
+- quantos minutos há em uma década?
+- qual é a sua idade em segundos?
+- quantos chocolates você pretende comer na vida?
+
+- Se minha idade é de 1232 milhões de segundos, qual é minha idade em anos?
+
+OBS.: 02-exercicio-ivo-la-puma.rb

@@ -1,0 +1,100 @@
+SIMULADO
+
+
+Cada exercício deve ser enviado separadamente. Por exemplo, o Exercício 1 deve ser entregue em um arquivo chamado “01-simulacao-<NOME_DO_ALUNO>.rb”. Se o aluno se chama Jonas Oliveira, o nome do arquivo deve ser “01-simulacao-jonas-oliveira.rb”.
+
+(valor = 1.25)
+1) Cada maça custa R$ 0,30, porém, se levar mais de uma dúzia, o preço de cada baixa para R$ 0,25. 
+
+Considerando essa precificação, escreva uma função chamada "preco_maca" que deve receber como parâmetro a quantidade de maçãs e deve retornar o valor em reais a ser pago por elas.
+
+Valide se a quantidade é um número maior que zero, se não for, a função deve retornar nil.
+
+puts(preco_maca(6)) # deve imprimir 1.8
+puts(preco_maca(12)) # deve imprimir 3.0
+
+
+
+(valor = 1.25)
+2) Escreva uma função chamada "tipo_triangulo" que deve receber três parâmetros: a, b e c, que se referem a cada lado do triângulo. A função deve retornar uma string contendo a seguinte informação, conforme a regra abaixo:
+
+"TRIANGULO EQUILATERO", se os 3 lados forem iguais
+"TRIANGULO ISÓSCELE", se 2 dos lados forem iguais
+"TRIANGULO ESCALENO", se os 3 lados forem diferentes
+
+Valide se os parâmetros são valores maiores que zero, se não forem, a função deve retornar deve retornar "ARGUMENTOS INVÁLIDOS".
+
+
+puts(tipo_triangulo(10, 10, 10))  # deve imprimir TRIANGULO EQUILÁTERO
+
+
+
+(valor = 1.75)
+3) Escreva uma função chamada "calcula_media" que deve receber um array de números como parâmetro e deve retornar o valor da média aritmética entre todos os números do array.
+
+
+puts(calcula_media([1, 2, -1, 3, 0, 7]))  # deve imprimir 2.0
+
+
+
+(valor = 1.75)
+4) Defina uma função chamada “imprimir_tabela”, que deve receber um número inteiro como parâmetro e deve imprimir na tela uma tabela de números seguindo a seguinte regra:
+
+1
+2 4
+3 6 9
+...
+n*1 n*2 n*3 ... n*n
+
+Valide se o parâmetro é um número maior que zero, se não for, a função deve imprimir na tela "ARGUMENTO INVÁLIDO"
+
+
+imprimir_tabela(5) # deve ser impresso na tela a seguinte tabela:
+
+ 1
+ 2 4
+ 3 6 9
+ 4 8 12 16
+ 5 10 15 20 25
+
+
+
+(valor = 1.75)
+5) Faça uma função chamada 'mediana' que recebe um array de números e retorna a mediana entre eles.
+
+
+Lembrando que para obter a mediana de uma série de números, é necessário ordenar a série (usar a função sort()) e retornar:
+
+- se a série tiver um número (n) ímpar de elementos, retornar o número da posição n/2 (a parte inteira);
+- e caso se a série tiver um número (n) par de elementos, retornar a média entre os números das posições (n/2)-1 e (n/2)
+
+Ex.: 
+
+puts(mediana([10, 0, -1, -500, 20, 100])) # deve imprimir 5.0
+puts(mediana([10, 0, -1, -500, 20]))      # deve imprimir 0.0
+
+
+
+(valor = 2.25)
+6) Considerando o código abaixo, implemente as partes que estão faltando para que a função que verifica se um texto é um palíndromo funcione corretamente.
+
+
+def palindromo(texto)
+    pontuacoes = ",.!?;:"
+    espaco = " "
+    texto.delete!(pontuacoes)
+    texto.delete!(espaco)
+    texto.upcase!()
+    com_acento = "ÁÉÍÓÚÂÊÎÔÛÃÕ"
+    sem_acento = "AEIOUAEIOUAO"
+    for i in (0..com_acento.size-1)
+        texto.gsub!(com_acento[i], sem_acento[i])
+    end
+    # implemente a partir daqui!
+end
+
+puts(palindromo("LÁ É RETRÔ, MADAME, TEMA DA MORTE REAL!")  # deve retornar true
+puts(palindromo("A história se repete, a primeira vez como tragédia e a segunda como farsa.")  # deve retornar false
+puts(palindromo("ABC DEFG. GFEDC BA!")  # deve retornar true
+
+

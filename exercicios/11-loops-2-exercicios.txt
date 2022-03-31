@@ -1,0 +1,113 @@
+1) Desenhe um quadrado de 10 linhas por 10 colunas. Desenhar as bordas com “*”, preencher com “x”.
+
+def imprimirQuadrado(tamanho)
+	for linha in (1..tamanho)
+		for coluna in(1..tamanho)
+			if linha == 1 || linha == tamanho || coluna == 1 || coluna == tamanho
+				print "*"
+			else
+				print "x"
+			end
+		end
+		print "\n"
+	end
+end
+tamanho = gets.chomp.to_i
+imprimirQuadrado(tamanho)
+
+2) Esse aqui é um desafio. Faça um código para obter esse resultado:
+
+        *
+        **
+        ***
+        ****
+        *****
+        ******
+        *******
+        ********
+        *********
+        **********
+
+def imprimirTriangulo1(altura)
+	for linha in(0..altura)	
+		for coluna in(1..linha+1)
+			print "*"
+		end
+		print "\n"
+	end
+end
+
+puts "Digite a altura do triangulo desejado"
+altura = gets.chomp.to_i
+
+imprimirTriangulo1(altura)
+
+
+
+3) Desenhar uma pirâmide. O tamanho da base deve ser informado. Se o tamanho da base for numero par, 
+o topo terá "**", se for ímpar "*". Então, cada nível é preenchido até que o nível da base tenha o 
+mesmo número de "*" que o número informado.
+
+    **
+   ****
+  ******
+ ********
+**********
+
+       *
+      ***
+     *****
+    *******
+   *********
+  ***********
+ *************
+***************
+def imprimirPiramide(base)
+	altura = (base / 2) - 1 + (base % 2)
+
+	if base % 2 == 0
+		blocoBase = "**"
+	else
+		blocoBase = "*"
+	end
+
+	for linha in(1..altura)
+		bloco = blocoBase + ("*" * (linha-1))
+		blocoVazio = " " * (altura - linha)
+		print blocoLinha
+		print "\n"
+	end
+end
+imprimirPiramide(10)
+imprimirPiramide(15)
+
+4) Quer mais? Tente fazer uma letra V, usando asteriscos “*” e
+underscores "_".
+
+_***************_
+*_*************_*
+**_***********_**
+***_*********_***
+****_*******_****
+*****_*****_*****
+******_***_******
+*******_*_*******
+********_********
+
+
+def imprimirV()
+	totalLinha = 10
+	totalColuna = 20
+
+	for linha in(1..totalLinha)
+		for coluna in(1..totalColuna-1)
+			if coluna == linha || coluna == (totalColuna - linha)
+				print "_"
+			else
+				print "*"
+		end
+		print "\n"
+	end
+end
+
+imprimirV()

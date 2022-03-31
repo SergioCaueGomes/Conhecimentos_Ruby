@@ -1,0 +1,42 @@
+Criar uma função para validação dos dados inseridos pelo usuário:
+    - Que receba o número digitado como parâmetro de entrada
+    - Que retorne uma resposta com um OK ou NÃO para a validação
+
+Definição da função
+  nome da função :: verificarNumero parâmetro de entrada -> dado digitado pelo usuário
+                          retorno da função com a condição de validação (é ou não é um número)
+                    Fim da Função          
+    
+Exibir uma mensagens de boas vindas
+Exibir uma mensagem informando o objetivo do programa
+
+Sortear um número aleatório
+Armazenar o número sorteado em uma variável (nome sugerido para a variável -> numero)
+Criar um sinalizador para que o programa pare (condição lógica(true ou false))
+    Inicializar o sinalizador com o valor FALSE
+Criar um contador (variavel) e inicializá-lo com 0 (ZERO)
+
+Até que o usuario acerte
+    Solicitar ao usuário um palpite (chute)
+    Armazenar o palpite do usuario em uma variável (nome sugerido para a variavel -> chute)
+    Verificar se o usuario não digitou um numero e se o numero é um numero válido
+    Executar a função de validação do tipo de dado e passar o número fornecido pelo usuário como parâmetro de entrada
+    Se não for um numero
+        Informar o usuario que ele não digitou um numero
+    Se o numero não está no intervalo determinado
+        Informar o usuario que o numero digitado está fora do intervalo
+    Se for um numero e for um numero válido
+        Incrementar o contador em 1 (UM)
+        Verificar a igualdade entre o numero sorteado e o chute do usuario
+        Se numero sorteado for IGUAL ao numero chutado
+           Alterar o sinalizador para verdadeiro
+           Informar ao usuario a quantidade de tentativas que ele usou e que o chute está correto
+        Se o numero sorteado for MAIOR que o numero chutado
+           Manter o valor do sinalizador como FALSE
+           Informar ao usuario que o chute está incorreto e que o numero sorteado ÉH MAIOR que o numero chutado
+        Se o numero sorterado for MENOR que o numero chutado  
+           Manter o valor do sinalizador como FALSE         
+           Informar ao usuario que o chute está incorreto e que o numero sorteado ÉH MENOR que o numero chutado   
+        Fim da Comparação
+    Fim da Validação
+Fim da Repetição        

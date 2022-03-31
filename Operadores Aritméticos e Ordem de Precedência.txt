@@ -1,0 +1,16 @@
+OPERADORES ARITMÉTICOS
+
++  Adição        A  +  B
+-  Subtração     A  -  B 
+*  Multiplicação A  *  B
+/  Divisão       A  /  B
+** Exponenciação A  ** B
+%  Módulo        A  %  B
+
+
+ORDEM DE PRECEDÊNCIA
+
+1. (  )  Parênteses
+2.  **   Exponenciação
+3.  * /  Multiplicação/Divisão
+4.  + -  Adição/Subtração
